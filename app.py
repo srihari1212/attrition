@@ -75,9 +75,9 @@ def attrition():
     put_text('ada boost :%s, xg boost :%s,gb boost :%s'%(ada(data)[0],xg(data)[0],gb(data)[0]))
 
 app.add_url_rule('/','webio_view',webio_view(attrition),methods = ['GET','POST','OPTIONS'])
-if __name__ == "__main__":
-    #app.run(debug=True)
+if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-p","--port",type=int,default=8080)
+    parser.add_argument("-p", "--port", type=int, default=8080)
     args = parser.parse_args()
-    start_server(attrition ,port=args.port())
+
+    start_server(attrition, port=args.port)
