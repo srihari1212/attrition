@@ -6,6 +6,7 @@ from pywebio import STATIC_PATH,start_server
 import time
 from data import encode
 from test import ada,gb,xg
+import argparse
 
 app = Flask(__name__)
 
