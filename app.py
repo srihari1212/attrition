@@ -7,7 +7,8 @@ import time
 from data import encode
 from test import ada,gb,xg
 import argparse
-
+import statistics
+from statistics import mode
 app = Flask(__name__)
 
 
@@ -69,10 +70,16 @@ def attrition():
     data = [Age	,BusinessTravel	,DailyRate,	Department,	DistanceFromHome	,Education,	EducationField,	EmployeeCount	,EnvironmentSatisfaction	,Gender,	HourlyRate,	JobInvolvement	,JobLevel,	JobRole,	JobSatisfaction	,MaritalStatus	,MonthlyIncome	,MonthlyRate,	NumCompaniesWorked	,OverTime	,PercentSalaryHike	,PerformanceRating	,RelationshipSatisfaction,	StandardHours	,StockOptionLevel,	TotalWorkingYears	,TrainingTimesLastYear,	WorkLifeBalance,	YearsAtCompany,	YearsInCurrentRole,	YearsSinceLastPromotion	,YearsWithCurrManager]
 
     #data = [39,	0,	592	,1,	2	,3,	1	,1,	1	,0,	54,	2	,1,	2	,1,	2,	3646,	17181,	2,	1,	23,	4	,2,	80,	0,	11	,2,	4	,1,	0,	0	,0]
-    print('ada',ada(data))
-    print('xg',xg(data))
-    print('gb',gb(data))
-    put_text('ada boost :%s, xg boost :%s,gb boost :%s'%(ada(data)[0],xg(data)[0],gb(data)[0]))
+    result=[]
+    result.append(ada(data)[0])
+    result.append(xg(data)[0])
+    result.append(gb(data)[0])
+    final = mode(result)
+    if final == 1:
+        put_text('Employee will leave!')
+    else:
+        put_text('Employee will stay!')
+
 
 app.add_url_rule('/','webio_view',webio_view(attrition),methods = ['GET','POST','OPTIONS'])
 if __name__ == '__main__':
