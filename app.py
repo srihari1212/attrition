@@ -77,10 +77,17 @@ def attrition():
     result.append(xg(data)[0])
     result.append(gb(data)[0])
     final = mode(result)
+    put_processbar('bar')
+    for i in range(1, 11):
+        set_processbar('bar', i / 10)
+        time.sleep(0.1)
+    put_markdown("Here is your result")
     if final == 1:
         put_text('Employee will leave!')
+        put_image(open('leave.jpg', 'rb').read())
     else:
         put_text('Employee will stay!')
+        put_image(open('stay.jpg', 'rb').read())
 
 
 app.add_url_rule('/','webio_view',webio_view(attrition),methods = ['GET','POST','OPTIONS'])
