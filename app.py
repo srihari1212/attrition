@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 
 def attrition():
-    Age = input("Enter the age of employee",type = NUMBER)
+    Age = input("Enter the age of employee",type = NUMBER,placeholder = "age")
     BusinessTravel = select('Which the type of BusinessTravel?', ['Travel_Rarely', 'Travel_Frequently', 'Non-Travel'])
     DailyRate = input("Enter the DailyRate of employee",type = NUMBER)
     Department = select('Which the type of Department?', ['Sales', 'Research & Development', 'Human Resources'])
