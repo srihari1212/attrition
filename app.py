@@ -33,7 +33,7 @@ def attrition():
     MonthlyRate	  = input("Enter the MonthlyRate",type = NUMBER,placeholder = "range 2094 to 26999")
     NumCompaniesWorked = input("Enter the Number of Companies Worked",type = NUMBER,placeholder = "range 0 to 9")
     OverTime =  select('does the employee do overtime?', ['Yes', 'No'])
-    PercentSalaryHike = input("Enter the PercentSalaryHike",type = NUMBER,,placeholder = "range 11 to 25")
+    PercentSalaryHike = input("Enter the PercentSalaryHike",type = NUMBER,placeholder = "range 11 to 25")
     PerformanceRating = select('select PerformanceRating', ['1','2','3', '4','5'])
     RelationshipSatisfaction  = select('select Relationship Satisfactionlevel', ['1','2','3', '4'])
     StandardHours = 80
