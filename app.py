@@ -85,6 +85,15 @@ def attrition():
     if final == 1:
         put_text('Employee will leave!')
         put_image(open('leave.jpg', 'rb').read())
+        put_text('  ')
+        put_text('  ')
+        put_text('when attrition crosses a particular threshold, it becomes a cause for concern. For example, attrition among minority employee groups could be hurting diversity at your organization. Or, attrition among senior leaders can lead to a significant gap in organizational leadership')
+        put_text('Here are some steps to reduce attrition rate!')
+        put_text('  ')
+        put_text('1.  Communicate your vision properly. When your staff is in the loop of what’s driving the business, they will share in the same vision that you have. It earns their dedication and commitment')
+        put_text('  ')
+        put_text('2.  Communicate your vision properly. When your staff is in the loop of what’s driving the business, they will share in the same vision that you have. It earns their dedication and commitment')
+        
     else:
         put_text('Employee will stay!')
         put_image(open('stay.jpg', 'rb').read())
