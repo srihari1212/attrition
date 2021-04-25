@@ -118,11 +118,37 @@ def attrition():
         put_text('7.  EMPLOYEE ENAGEMENT')
         put_text('      When you have talented employees, you need to find ways that you can help them expand their skill set. Give your feedback, let them know what you think. Pay attention, and let them know that you are there for them. If you don’t engage with them, they will get bored and complacent, and think that they are not growing within the organization.')
         put_text('  ')
-        
+        put_image(open('doyouknow.jpg', 'rb').read())
+        put_text('  ')
+        put_text('Some positive and interesting facts about your company:')
+        put_text('  1.	The overall attrition rate of your firm is 16.12% - a pretty good number')
+        put_text('  2.	66% of your employees are good in balancing work life balance and only 1.97 are bad in work life balance.')
+        put_text('  3.	28.3% of employees do overtime. -Try to reduce this number')
+        put_text('  4.	Most of the employees are satisfied working here except 289.')
+        put_text('  5.	Average income of a employee is 6.50k')
+        put_text('  6.	Average years a employee at company is 7.01')
+        put_text('  7.	Every 2.19 years a employee gets promoted in your firm.')
+        put_text('  8.	Average salary hike is 15.21')
+        put_text('  ')
     
     else:
         put_text('Employee will stay!')
         put_image(open('stay.jpg', 'rb').read())
+        put_text('  ')
+        put_text('Some positive and interesting facts about your company:')
+        put_text('  ')
+        put_image(open('doyouknow.jpg', 'rb').read())
+        put_text('  ')
+        
+        put_text('  1.	The overall attrition rate of your firm is 16.12% - a pretty good number')
+        put_text('  2.	66% of your employees are good in balancing work life balance and only 1.97 are bad in work life balance.')
+        put_text('  3.	28.3% of employees do overtime. -Try to reduce this number')
+        put_text('  4.	Most of the employees are satisfied working here except 289.')
+        put_text('  5.	Average income of a employee is 6.50k')
+        put_text('  6.	Average years a employee at company is 7.01')
+        put_text('  7.	Every 2.19 years a employee gets promoted in your firm.')
+        put_text('  8.	Average salary hike is 15.21')
+        put_text('  ')
 
 
 app.add_url_rule('/','webio_view',webio_view(attrition),methods = ['GET','POST','OPTIONS'])
